@@ -29,27 +29,27 @@ Or install it yourself as:
 ```ruby
 result = Expresenter.call(true, actual: "FOO", error: nil, expected: "foo", got: true, negate: true, valid: true, matcher: :eql, level: :MUST)
 
-actual.failed? # => false
-actual.failure? # => false
-actual.info? # => false
-actual.warning? # => false
-actual.to_sym # => :success
-actual.char # => "."
-actual.emoji # => "✅"
-actual.passed? # => true
-actual.negate? # => true
-actual.error? # => false
-actual.success? # => true
-actual.valid? # => true
-actual.inspect # => "Expresenter::Pass(actual: \"FOO\", error: nil, expected: \"foo\", got: true, matcher: :eql, negate: true, level: :MUST, valid: true)"
-actual.definition # => "eql \"foo\""
-actual.maybe_negate # => " not"
-actual.summary # => "expected \"FOO\" not to eql \"foo\""
-actual.colored_char # => "\e[32m.\e[0m"
-actual.colored_string # => "\e[32mSuccess: expected \"FOO\" not to eql \"foo\".\e[0m"
+result.failed? # => false
+result.failure? # => false
+result.info? # => false
+result.warning? # => false
+result.to_sym # => :success
+result.char # => "."
+result.emoji # => "✅"
+result.passed? # => true
+result.negate? # => true
+result.error? # => false
+result.success? # => true
+result.valid? # => true
+result.inspect # => "Expresenter::Pass(actual: \"FOO\", error: nil, expected: \"foo\", got: true, matcher: :eql, negate: true, level: :MUST, valid: true)"
+result.definition # => "eql \"foo\""
+result.maybe_negate # => " not"
+result.summary # => "expected \"FOO\" not to eql \"foo\""
+result.colored_char # => "\e[32m.\e[0m"
+result.colored_string # => "\e[32mSuccess: expected \"FOO\" not to eql \"foo\".\e[0m"
 result.message # => "Success: expected \"FOO\" not to eql \"foo\"."
-actual.to_s # => "Success: expected \"FOO\" not to eql \"foo\"."
-actual.titre # => "Success"
+result.to_s # => "Success: expected \"FOO\" not to eql \"foo\"."
+result.titre # => "Success"
 ```
 
 ## Contact
