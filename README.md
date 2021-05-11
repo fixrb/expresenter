@@ -26,8 +26,38 @@ Or install it yourself as:
 
 ## Usage
 
+Assuming that an expectation is an assertion that is either `true` or `false`,
+qualifying it with `MUST`, `SHOULD` and `MAY`, we can draw up several scenarios:
+
+| Requirement levels        | **MUST** | **SHOULD** | **MAY** |
+| ------------------------- | -------- | ---------- | ------- |
+| Implemented & Matched     | `true`   | `true`     | `true`  |
+| Implemented & Not matched | `false`  | `true`     | `false` |
+| Implemented & Exception   | `false`  | `false`    | `false` |
+| Not implemented           | `false`  | `false`    | `true`  |
+
+Then,
+
+* for a `true` assertion, a `Expresenter::Pass` instance can be returned;
+* for a `false` assertion, a `Expresenter::Fail` exception can be raised.
+
+Both class share a common interface.
+
+Passed expectations can be classified as:
+
+* ✅ success
+* ⚠️ warning
+* 💡 info
+
+Failed expectations can be classified as:
+
+* ❌ failure
+* 💥 error
+
+## Example
+
 ```ruby
-result = Expresenter.call(true, actual: "FOO", error: nil, expected: "foo", got: true, negate: true, valid: true, matcher: :eql, level: :MUST)
+result = Expresenter.call(true).with(actual: "FOO", error: nil, expected: "foo", got: true, negate: true, valid: true, matcher: :eql, level: :MUST)
 
 result.failed? # => false
 result.failure? # => false
@@ -51,6 +81,11 @@ result.message # => "Success: expected \"FOO\" not to eql \"foo\"."
 result.to_s # => "Success: expected \"FOO\" not to eql \"foo\"."
 result.titre # => "Success"
 ```
+
+### More Examples
+
+A full list of unit tests can be viewed (and executed) here:
+[./test.rb](https://github.com/fixrb/expresenter/blob/main/test.rb)
 
 ## Contact
 
