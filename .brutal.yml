@@ -1,0 +1,69 @@
+---
+header: |
+  #!/usr/bin/env ruby
+  # frozen_string_literal: true
+
+  require "simplecov"
+
+  ::SimpleCov.command_name "Brutal test suite"
+  ::SimpleCov.start
+
+  require "./lib/expresenter"
+
+subject: |
+  begin
+    Expresenter.call(%{is_passed}).with(actual: "%{actual}", error: %{error}, expected: %{expected}, got: %{got}, negate: %{negate}, valid: %{valid}, matcher: :%{matcher}, level: :%{level})
+  rescue ::Expresenter::Fail => e
+    e
+  end
+
+contexts:
+  is_passed:
+    - true
+    - false
+  actual:
+    - foo
+  error:
+    - Exception.new("BOOM")
+    - nil
+  expected:
+    - 42
+  got:
+    - true
+    - false
+    - nil
+  negate:
+    - true
+    - false
+  valid:
+    - true
+    - false
+  matcher:
+    - eql
+  level:
+    - MUST
+    - SHOULD
+    - MAY
+
+actuals:
+  - "%{subject}.failed?"
+  - "%{subject}.failure?"
+  - "%{subject}.info?"
+  - "%{subject}.warning?"
+  - "%{subject}.to_sym"
+  - "%{subject}.char"
+  - "%{subject}.emoji"
+  - "%{subject}.passed?"
+  - "%{subject}.negate?"
+  - "%{subject}.error?"
+  - "%{subject}.success?"
+  - "%{subject}.valid?"
+  - "%{subject}.inspect"
+  - "%{subject}.definition"
+  - "%{subject}.maybe_negate"
+  - "%{subject}.summary"
+  - "%{subject}.colored_char"
+  - "%{subject}.colored_string"
+  - "%{subject}.message"
+  - "%{subject}.to_s"
+  - "%{subject}.titre"
