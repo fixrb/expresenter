@@ -1,15 +1,42 @@
 # frozen_string_literal: true
 
-require_relative "base"
+require_relative "common"
 
 module Expresenter
-  # The class that is responsible for reporting that the expectation is false.
+  # The class that is responsible for reporting that an expectation is false.
   class Fail < ::StandardError
-    include Base
+    include Common
 
-    # @raise [Fail] A failed spec result.
+    # @param (see Fail#initialize)
+    # @raise [Fail] A failed spec exception.
     def self.with(**details)
       raise new(**details)
+    end
+
+    # Initialize method.
+    #
+    # @param actual   [#object_id] Returned value by the challenged subject.
+    # @param error    [Exception, nil] Any possible raised exception.
+    # @param expected [#object_id] The expected value.
+    # @param got      [Boolean, nil] The result of the boolean comparison
+    #   between the actual value and the expected value through the matcher.
+    # @param negate   [Boolean] Evaluated to a negative assertion?
+    # @param valid    [Boolean] Report if the test was true or false?
+    # @param matcher  [Symbol] The matcher.
+    # @param level    [:MUST, :SHOULD, :MAY] The requirement level.
+    def initialize(actual:, error:, expected:, got:, negate:, valid:,
+                   matcher:, level:)
+
+      @actual   = actual
+      @error    = error
+      @expected = expected
+      @got      = got
+      @negate   = negate
+      @valid    = valid
+      @matcher  = matcher
+      @level    = level
+
+      super(to_s)
     end
 
     # Did the test fail?
@@ -44,7 +71,11 @@ module Expresenter
     #
     # @return [Symbol] The identifier of the state.
     def to_sym
-      failure? ? :failure : :error
+      if failure?
+        :failure
+      else
+        :error
+      end
     end
 
     # Express the result with one char.

@@ -41,7 +41,7 @@ Then,
 * for a `true` assertion, a `Expresenter::Pass` instance can be returned;
 * for a `false` assertion, a `Expresenter::Fail` exception can be raised.
 
-Both class share a common interface.
+Both class share a same `Common` interface.
 
 Passed expectations can be classified as:
 
@@ -54,10 +54,25 @@ Failed expectations can be classified as:
 * ❌ failure
 * 💥 error
 
-## Example
+### Instantiation
+
+The following parameters are required to instantiate the result:
+
+* `actual`: Returned value by the challenged subject.
+* `error`: Any possible raised exception.
+* `expected`: The expected value.
+* `got`: The result of the boolean comparison between the actual value and the expected value through the matcher.
+* `negate`: Evaluated to a negative assertion?
+* `valid`: Report if the test was `true` or `false`.
+* `matcher`: The symbol representing a matcher.
+* `level`: The requirement level (`:MUST`, `:SHOULD` or `:MAY`).
+
+#### Examples
+
+A passed expectation:
 
 ```ruby
-result = Expresenter.call(true).with(actual: "FOO", error: nil, expected: "foo", got: true, negate: true, valid: true, matcher: :eql, level: :MUST)
+result = Expresenter.call(true).new(actual: "FOO", error: nil, expected: "foo", got: true, negate: true, valid: true, matcher: :eql, level: :MUST)
 
 result.failed? # => false
 result.failure? # => false
@@ -81,6 +96,56 @@ result.message # => "Success: expected \"FOO\" not to eql \"foo\"."
 result.to_s # => "Success: expected \"FOO\" not to eql \"foo\"."
 result.titre # => "Success"
 ```
+
+A failed expectation:
+
+```ruby
+result = Expresenter.call(false).new(actual: "foo", error: Exception.new("BOOM"), expected: 42, got: true, negate: true, valid: true, matcher: :eql, level: :MUST)
+
+actual.failed? # => true
+actual.failure? # => false
+actual.info? # => false
+actual.warning? # => false
+actual.to_sym # => :error
+actual.char # => "E"
+actual.emoji # => "💥"
+actual.passed? # => false
+actual.negate? # => true
+actual.error? # => true
+actual.success? # => true
+actual.valid? # => true
+actual.inspect # => "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: true, level: :MUST, valid: true)"
+actual.definition # => "eql 42"
+actual.maybe_negate # => " not"
+actual.summary # => "BOOM"
+actual.colored_char # => "\e[32mE\e[0m"
+actual.colored_string # => "\e[32mException: BOOM.\e[0m"
+actual.message # => "Exception: BOOM."
+actual.to_s # => "Exception: BOOM."
+actual.titre # => "Exception"
+```
+
+### Return or Raise
+
+To return the results which pass, and to raise the results which fail, the `with` method is available.
+
+In this example, the result passes, the instance is therefore returned:
+
+```ruby
+Expresenter.call(true).with(actual: "FOO", error: nil, expected: "foo", got: true, negate: true, valid: true, matcher: :eql, level: :MUST) # => Expresenter::Pass(actual: "FOO", error: nil, expected: "foo", got: true, matcher: :eql, negate: true, level: :MUST, valid: true)
+```
+
+In this example, the result fails, so the exception is raised:
+
+```ruby
+Expresenter.call(false).with(actual: "foo", error: Exception.new("BOOM"), expected: 42, got: true, negate: true, valid: true, matcher: :eql, level: :MUST)
+```
+
+> Traceback (most recent call last):
+>         3: from ./bin/console:7:in `<main>'
+>         2: from (irb):1
+>         1: from /Users/cyril/github/fixrb/expresenter/lib/expresenter/fail.rb:12:in `with'
+> Expresenter::Fail (Exception: BOOM.)
 
 ### More Examples
 

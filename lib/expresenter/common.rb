@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 module Expresenter
-  # Common collection of methods for Result's classes.
-  module Base
+  # Common collection of methods.
+  module Common
     # @return [#object_id] Returned value by the challenged subject.
     attr_reader :actual
 
@@ -21,32 +21,6 @@ module Expresenter
 
     # @return [:MUST, :SHOULD, :MAY] The requirement level of the expectation.
     attr_reader :level
-
-    # Common initialize method.
-    #
-    # @param actual   [#object_id] Returned value by the challenged subject.
-    # @param error    [Exception, nil] Any possible raised exception.
-    # @param expected [#object_id] The expected value.
-    # @param got      [Boolean, nil] The result of the boolean comparison
-    #   between the actual value and the expected value through the matcher.
-    # @param negate   [Boolean] Evaluated to a negative assertion?
-    # @param valid    [Boolean] Report if the test was true or false?
-    # @param matcher  [Symbol] The matcher.
-    # @param level    [:MUST, :SHOULD, :MAY] The requirement level.
-    def initialize(actual:, error:, expected:, got:, negate:, valid:,
-                   matcher:, level:)
-
-      @actual   = actual
-      @error    = error
-      @expected = expected
-      @got      = got
-      @negate   = negate
-      @valid    = valid
-      @matcher  = matcher
-      @level    = level
-
-      super(to_s) if failed?
-    end
 
     # Did the test pass?
     #

@@ -11,15 +11,15 @@
 Metrics/MethodLength:
   Max: 11
 
-# Offense count: 1
+# Offense count: 2
 # Configuration parameters: CountKeywordArgs, MaxOptionalParameters.
 Metrics/ParameterLists:
   Max: 8
 
-# Offense count: 2
+# Offense count: 6
 # Cop supports --auto-correct.
 # Configuration parameters: AutoCorrect, AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
 # URISchemes: http, https
 # IgnoredPatterns: (?-mix:^\#)
 Layout/LineLength:
-  Max: 154
+  Max: 272

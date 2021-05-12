@@ -1,18 +1,43 @@
 # frozen_string_literal: true
 
-require_relative "base"
+require_relative "common"
 
 module Expresenter
-  # The class that is responsible for reporting that the expectation is true.
+  # The class that is responsible for reporting that an expectation is true.
   class Pass
-    include Base
+    include Common
 
-    # @return [Pass] A passed spec result.
+    # @param (see Pass#initialize)
+    # @return [Pass] A passed spec instance.
     def self.with(**details)
       new(**details)
     end
 
     alias message to_s
+
+    # Initialize method.
+    #
+    # @param actual   [#object_id] Returned value by the challenged subject.
+    # @param error    [Exception, nil] Any possible raised exception.
+    # @param expected [#object_id] The expected value.
+    # @param got      [Boolean, nil] The result of the boolean comparison
+    #   between the actual value and the expected value through the matcher.
+    # @param negate   [Boolean] Evaluated to a negative assertion?
+    # @param valid    [Boolean] Report if the test was true or false?
+    # @param matcher  [Symbol] The matcher.
+    # @param level    [:MUST, :SHOULD, :MAY] The requirement level.
+    def initialize(actual:, error:, expected:, got:, negate:, valid:,
+                   matcher:, level:)
+
+      @actual   = actual
+      @error    = error
+      @expected = expected
+      @got      = got
+      @negate   = negate
+      @valid    = valid
+      @matcher  = matcher
+      @level    = level
+    end
 
     # Did the test fail?
     #
