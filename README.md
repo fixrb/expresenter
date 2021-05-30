@@ -1,7 +1,6 @@
 # Expresenter
 
 [![Build Status](https://api.travis-ci.org/fixrb/expresenter.svg?branch=main)][travis]
-[![Code Climate](https://codeclimate.com/github/fixrb/expresenter/badges/gpa.svg)][codeclimate]
 [![Gem Version](https://badge.fury.io/rb/expresenter.svg)][gem]
 [![Inline docs](https://inch-ci.org/github/fixrb/expresenter.svg?branch=main)][inchpages]
 [![Documentation](https://img.shields.io/:yard-docs-38c800.svg)][rubydoc]
@@ -18,11 +17,15 @@ gem "expresenter"
 
 And then execute:
 
-    $ bundle
+```sh
+bundle
+```
 
 Or install it yourself as:
 
-    $ gem install expresenter
+```sh
+gem install expresenter
+```
 
 ## Usage
 
@@ -88,10 +91,9 @@ result.success? # => true
 result.valid? # => true
 result.inspect # => "Expresenter::Pass(actual: \"FOO\", error: nil, expected: \"foo\", got: true, matcher: :eql, negate: true, level: :MUST, valid: true)"
 result.definition # => "eql \"foo\""
-result.maybe_negate # => " not"
 result.summary # => "expected \"FOO\" not to eql \"foo\""
 result.colored_char # => "\e[32m.\e[0m"
-result.colored_string # => "\e[32mSuccess: expected \"FOO\" not to eql \"foo\".\e[0m"
+result.colored_string # => "\e[32m\e[1mSuccess\e[22m: expected \"FOO\" not to eql \"foo\".\e[0m"
 result.message # => "Success: expected \"FOO\" not to eql \"foo\"."
 result.to_s # => "Success: expected \"FOO\" not to eql \"foo\"."
 result.titre # => "Success"
@@ -102,27 +104,26 @@ A failed expectation:
 ```ruby
 result = Expresenter.call(false).new(actual: "foo", error: Exception.new("BOOM"), expected: 42, got: true, negate: true, valid: true, matcher: :eql, level: :MUST)
 
-actual.failed? # => true
-actual.failure? # => false
-actual.info? # => false
-actual.warning? # => false
-actual.to_sym # => :error
-actual.char # => "E"
-actual.emoji # => "💥"
-actual.passed? # => false
-actual.negate? # => true
-actual.error? # => true
-actual.success? # => true
-actual.valid? # => true
-actual.inspect # => "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: true, level: :MUST, valid: true)"
-actual.definition # => "eql 42"
-actual.maybe_negate # => " not"
-actual.summary # => "BOOM"
-actual.colored_char # => "\e[32mE\e[0m"
-actual.colored_string # => "\e[32mException: BOOM.\e[0m"
-actual.message # => "Exception: BOOM."
-actual.to_s # => "Exception: BOOM."
-actual.titre # => "Exception"
+result.failed? # => true
+result.failure? # => false
+result.info? # => false
+result.warning? # => false
+result.to_sym # => :error
+result.char # => "E"
+result.emoji # => "💥"
+result.passed? # => false
+result.negate? # => true
+result.error? # => true
+result.success? # => true
+result.valid? # => true
+result.inspect # => "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: true, level: :MUST, valid: true)"
+result.definition # => "eql 42"
+result.summary # => "BOOM"
+result.colored_char # => "\e[31mE\e[0m"
+result.colored_string # => "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
+result.message # => "Exception: BOOM."
+result.to_s # => "Exception: BOOM."
+result.titre # => "Exception"
 ```
 
 ### Return or Raise
@@ -144,7 +145,7 @@ Expresenter.call(false).with(actual: "foo", error: Exception.new("BOOM"), expect
 > Traceback (most recent call last):
 >         3: from ./bin/console:7:in `<main>'
 >         2: from (irb):1
->         1: from /Users/cyril/github/fixrb/expresenter/lib/expresenter/fail.rb:12:in `with'
+>         1: from /Users/cyril/github/fixrb/expresenter/lib/expresenter/fail.rb:19:in `with'
 > Expresenter::Fail (Exception: BOOM.)
 
 ### More Examples
@@ -157,19 +158,13 @@ A full list of unit tests can be viewed (and executed) here:
 * Home page: https://github.com/fixrb/expresenter
 * Bugs/issues: https://github.com/fixrb/expresenter/issues
 
-## Rubies
-
-* [MRI](https://www.ruby-lang.org/)
-* [Rubinius](https://rubinius.com/)
-* [JRuby](https://www.jruby.org/)
-
 ## Versioning
 
 __Expresenter__ follows [Semantic Versioning 2.0](https://semver.org/).
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The [gem](https://rubygems.org/gems/expresenter) is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
 ***
 
@@ -182,6 +177,5 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 [gem]: https://rubygems.org/gems/expresenter
 [travis]: https://travis-ci.org/fixrb/expresenter
-[codeclimate]: https://codeclimate.com/github/fixrb/expresenter
 [inchpages]: https://inch-ci.org/github/fixrb/expresenter
 [rubydoc]: https://rubydoc.info/gems/expresenter/frames

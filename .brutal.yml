@@ -60,7 +60,6 @@ actuals:
   - "%{subject}.valid?"
   - "%{subject}.inspect"
   - "%{subject}.definition"
-  - "%{subject}.maybe_negate"
   - "%{subject}.summary"
   - "%{subject}.colored_char"
   - "%{subject}.colored_string"

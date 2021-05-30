@@ -5,6 +5,15 @@ require_relative "common"
 module Expresenter
   # The class that is responsible for reporting that an expectation is true.
   class Pass
+    INFO_CHAR     = "I"
+    INFO_EMOJI    = "💡"
+
+    SUCCESS_CHAR  = "."
+    SUCCESS_EMOJI = "✅"
+
+    WARNING_CHAR  = "W"
+    WARNING_EMOJI = "⚠️"
+
     include Common
 
     # @param (see Pass#initialize)
@@ -71,10 +80,13 @@ module Expresenter
     #
     # @return [Symbol] The identifier of the state.
     def to_sym
-      return :success if success?
-      return :warning if warning?
-
-      :info
+      if success?
+        :success
+      elsif warning?
+        :warning
+      else
+        :info
+      end
     end
 
     # Express the result with one char.
@@ -82,11 +94,11 @@ module Expresenter
     # @return [String] The char that identify the result.
     def char
       if success?
-        "."
+        SUCCESS_CHAR
       elsif warning?
-        "W"
+        WARNING_CHAR
       else
-        "I"
+        INFO_CHAR
       end
     end
 
@@ -95,11 +107,23 @@ module Expresenter
     # @return [String] The emoji that identify the result.
     def emoji
       if success?
-        "✅"
+        SUCCESS_EMOJI
       elsif warning?
-        "⚠️"
+        WARNING_EMOJI
       else
-        "💡"
+        INFO_EMOJI
+      end
+    end
+
+    protected
+
+    def color(str)
+      if success?
+        "\e[32m#{str}\e[0m" # green
+      elsif warning?
+        "\e[33m#{str}\e[0m" # yellow
+      else
+        "\e[36m#{str}\e[0m" # blue
       end
     end
   end

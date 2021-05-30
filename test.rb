@@ -20,7 +20,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != true
@@ -28,7 +28,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: true, level: :MUST, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -52,7 +51,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != true
@@ -60,7 +59,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: true, level: :MUST, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -84,7 +82,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != true
@@ -92,7 +90,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: false, level: :MUST, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -116,7 +113,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != true
@@ -124,7 +121,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: false, level: :MUST, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -148,7 +144,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != true
@@ -156,7 +152,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: true, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -180,7 +175,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != true
@@ -188,7 +183,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: true, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -212,7 +206,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != true
@@ -220,7 +214,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: false, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -244,7 +237,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != true
@@ -252,7 +245,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: false, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -276,7 +268,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != true
@@ -284,7 +276,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: true, level: :MAY, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -308,7 +299,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != true
@@ -316,7 +307,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: true, level: :MAY, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -340,7 +330,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != true
@@ -348,7 +338,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: false, level: :MAY, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -372,7 +361,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != true
@@ -380,7 +369,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: false, level: :MAY, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -403,8 +391,8 @@ actual = begin
 end
 
 raise if actual.char != "E"
-raise if actual.colored_char != "\e[32mE\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[31mE\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -412,7 +400,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: true, level: :MUST, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -435,8 +422,8 @@ actual = begin
 end
 
 raise if actual.char != "E"
-raise if actual.colored_char != "\e[32mE\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[31mE\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -444,7 +431,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: true, level: :MUST, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -467,8 +453,8 @@ actual = begin
 end
 
 raise if actual.char != "E"
-raise if actual.colored_char != "\e[32mE\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[31mE\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -476,7 +462,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: false, level: :MUST, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -499,8 +484,8 @@ actual = begin
 end
 
 raise if actual.char != "E"
-raise if actual.colored_char != "\e[32mE\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[31mE\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -508,7 +493,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: false, level: :MUST, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -531,8 +515,8 @@ actual = begin
 end
 
 raise if actual.char != "E"
-raise if actual.colored_char != "\e[32mE\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[31mE\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -540,7 +524,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: true, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -563,8 +546,8 @@ actual = begin
 end
 
 raise if actual.char != "E"
-raise if actual.colored_char != "\e[32mE\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[31mE\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -572,7 +555,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: true, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -595,8 +577,8 @@ actual = begin
 end
 
 raise if actual.char != "E"
-raise if actual.colored_char != "\e[32mE\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[31mE\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -604,7 +586,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: false, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -627,8 +608,8 @@ actual = begin
 end
 
 raise if actual.char != "E"
-raise if actual.colored_char != "\e[32mE\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[31mE\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -636,7 +617,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: false, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -659,8 +639,8 @@ actual = begin
 end
 
 raise if actual.char != "E"
-raise if actual.colored_char != "\e[32mE\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[31mE\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -668,7 +648,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: true, level: :MAY, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -691,8 +670,8 @@ actual = begin
 end
 
 raise if actual.char != "E"
-raise if actual.colored_char != "\e[32mE\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[31mE\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -700,7 +679,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: true, level: :MAY, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -723,8 +701,8 @@ actual = begin
 end
 
 raise if actual.char != "E"
-raise if actual.colored_char != "\e[32mE\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[31mE\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -732,7 +710,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: false, level: :MAY, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -755,8 +732,8 @@ actual = begin
 end
 
 raise if actual.char != "E"
-raise if actual.colored_char != "\e[32mE\e[0m"
-raise if actual.colored_string != "\e[32mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[31mE\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -764,7 +741,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: false, level: :MAY, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -787,8 +763,8 @@ actual = begin
 end
 
 raise if actual.char != "W"
-raise if actual.colored_char != "\e[36mW\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[33mW\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != true
@@ -796,7 +772,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: true, level: :MUST, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -819,8 +794,8 @@ actual = begin
 end
 
 raise if actual.char != "W"
-raise if actual.colored_char != "\e[36mW\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[33mW\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != true
@@ -828,7 +803,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: true, level: :MUST, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -851,8 +825,8 @@ actual = begin
 end
 
 raise if actual.char != "W"
-raise if actual.colored_char != "\e[36mW\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[33mW\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != true
@@ -860,7 +834,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: false, level: :MUST, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -883,8 +856,8 @@ actual = begin
 end
 
 raise if actual.char != "W"
-raise if actual.colored_char != "\e[36mW\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[33mW\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != true
@@ -892,7 +865,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: false, level: :MUST, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -915,8 +887,8 @@ actual = begin
 end
 
 raise if actual.char != "W"
-raise if actual.colored_char != "\e[36mW\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[33mW\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != true
@@ -924,7 +896,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: true, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -947,8 +918,8 @@ actual = begin
 end
 
 raise if actual.char != "W"
-raise if actual.colored_char != "\e[36mW\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[33mW\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != true
@@ -956,7 +927,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: true, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -979,8 +949,8 @@ actual = begin
 end
 
 raise if actual.char != "W"
-raise if actual.colored_char != "\e[36mW\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[33mW\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != true
@@ -988,7 +958,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: false, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -1011,8 +980,8 @@ actual = begin
 end
 
 raise if actual.char != "W"
-raise if actual.colored_char != "\e[36mW\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[33mW\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != true
@@ -1020,7 +989,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: false, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -1043,8 +1011,8 @@ actual = begin
 end
 
 raise if actual.char != "W"
-raise if actual.colored_char != "\e[36mW\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[33mW\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != true
@@ -1052,7 +1020,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: true, level: :MAY, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -1075,8 +1042,8 @@ actual = begin
 end
 
 raise if actual.char != "W"
-raise if actual.colored_char != "\e[36mW\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[33mW\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != true
@@ -1084,7 +1051,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: true, level: :MAY, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -1107,8 +1073,8 @@ actual = begin
 end
 
 raise if actual.char != "W"
-raise if actual.colored_char != "\e[36mW\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[33mW\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != true
@@ -1116,7 +1082,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: false, level: :MAY, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -1139,8 +1104,8 @@ actual = begin
 end
 
 raise if actual.char != "W"
-raise if actual.colored_char != "\e[36mW\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_char != "\e[33mW\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != true
@@ -1148,7 +1113,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: false, level: :MAY, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -1172,7 +1136,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -1180,7 +1144,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: true, level: :MUST, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -1204,7 +1167,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -1212,7 +1175,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: true, level: :MUST, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -1236,7 +1198,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -1244,7 +1206,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: false, level: :MUST, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -1268,7 +1229,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -1276,7 +1237,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: false, level: :MUST, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -1300,7 +1260,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -1308,7 +1268,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: true, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -1332,7 +1291,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -1340,7 +1299,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: true, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -1364,7 +1322,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -1372,7 +1330,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: false, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -1396,7 +1353,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -1404,7 +1361,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: false, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -1428,7 +1384,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -1436,7 +1392,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: true, level: :MAY, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -1460,7 +1415,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -1468,7 +1423,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: true, level: :MAY, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -1492,7 +1446,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -1500,7 +1454,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: false, level: :MAY, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -1524,7 +1477,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -1532,7 +1485,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: false, matcher: :eql, negate: false, level: :MAY, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -1556,7 +1508,7 @@ end
 
 raise if actual.char != "I"
 raise if actual.colored_char != "\e[36mI\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != true
@@ -1564,7 +1516,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: true, level: :MUST, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -1588,7 +1539,7 @@ end
 
 raise if actual.char != "I"
 raise if actual.colored_char != "\e[36mI\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != true
@@ -1596,7 +1547,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: true, level: :MUST, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -1620,7 +1570,7 @@ end
 
 raise if actual.char != "I"
 raise if actual.colored_char != "\e[36mI\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != true
@@ -1628,7 +1578,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: false, level: :MUST, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -1652,7 +1601,7 @@ end
 
 raise if actual.char != "I"
 raise if actual.colored_char != "\e[36mI\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != true
@@ -1660,7 +1609,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: false, level: :MUST, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -1684,7 +1632,7 @@ end
 
 raise if actual.char != "I"
 raise if actual.colored_char != "\e[36mI\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != true
@@ -1692,7 +1640,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: true, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -1716,7 +1663,7 @@ end
 
 raise if actual.char != "I"
 raise if actual.colored_char != "\e[36mI\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != true
@@ -1724,7 +1671,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: true, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -1748,7 +1694,7 @@ end
 
 raise if actual.char != "I"
 raise if actual.colored_char != "\e[36mI\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != true
@@ -1756,7 +1702,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: false, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -1780,7 +1725,7 @@ end
 
 raise if actual.char != "I"
 raise if actual.colored_char != "\e[36mI\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != true
@@ -1788,7 +1733,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: false, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -1812,7 +1756,7 @@ end
 
 raise if actual.char != "I"
 raise if actual.colored_char != "\e[36mI\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != true
@@ -1820,7 +1764,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: true, level: :MAY, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -1844,7 +1787,7 @@ end
 
 raise if actual.char != "I"
 raise if actual.colored_char != "\e[36mI\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != true
@@ -1852,7 +1795,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: true, level: :MAY, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -1876,7 +1818,7 @@ end
 
 raise if actual.char != "I"
 raise if actual.colored_char != "\e[36mI\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != true
@@ -1884,7 +1826,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: false, level: :MAY, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -1908,7 +1849,7 @@ end
 
 raise if actual.char != "I"
 raise if actual.colored_char != "\e[36mI\e[0m"
-raise if actual.colored_string != "\e[36mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != true
@@ -1916,7 +1857,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != true
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: false, level: :MAY, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -1940,7 +1880,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -1948,7 +1888,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: true, level: :MUST, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -1972,7 +1911,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -1980,7 +1919,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: true, level: :MUST, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -2004,7 +1942,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -2012,7 +1950,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: false, level: :MUST, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -2036,7 +1973,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -2044,7 +1981,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: false, level: :MUST, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -2068,7 +2004,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -2076,7 +2012,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: true, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -2100,7 +2035,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -2108,7 +2043,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: true, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -2132,7 +2066,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -2140,7 +2074,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: false, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -2164,7 +2097,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -2172,7 +2105,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: false, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -2196,7 +2128,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -2204,7 +2136,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: true, level: :MAY, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -2228,7 +2159,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -2236,7 +2167,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: true, level: :MAY, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -2260,7 +2190,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -2268,7 +2198,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: false, level: :MAY, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -2292,7 +2221,7 @@ end
 
 raise if actual.char != "E"
 raise if actual.colored_char != "\e[31mE\e[0m"
-raise if actual.colored_string != "\e[31mException: BOOM.\e[0m"
+raise if actual.colored_string != "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💥"
 raise if actual.error? != true
@@ -2300,7 +2229,6 @@ raise if actual.failed? != true
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: nil, matcher: :eql, negate: false, level: :MAY, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Exception: BOOM."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -2324,7 +2252,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mSuccess: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mSuccess\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != false
@@ -2332,7 +2260,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: true, level: :MUST, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Success: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -2356,7 +2283,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mSuccess: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mSuccess\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != false
@@ -2364,7 +2291,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: true, level: :MUST, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Success: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -2388,7 +2314,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mSuccess: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mSuccess\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != false
@@ -2396,7 +2322,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: false, level: :MUST, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Success: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -2420,7 +2345,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mSuccess: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mSuccess\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != false
@@ -2428,7 +2353,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: false, level: :MUST, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Success: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -2452,7 +2376,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mSuccess: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mSuccess\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != false
@@ -2460,7 +2384,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: true, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Success: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -2484,7 +2407,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mSuccess: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mSuccess\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != false
@@ -2492,7 +2415,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: true, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Success: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -2516,7 +2438,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mSuccess: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mSuccess\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != false
@@ -2524,7 +2446,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: false, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Success: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -2548,7 +2469,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mSuccess: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mSuccess\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != false
@@ -2556,7 +2477,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: false, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Success: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -2580,7 +2500,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mSuccess: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mSuccess\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != false
@@ -2588,7 +2508,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: true, level: :MAY, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Success: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -2612,7 +2531,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mSuccess: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mSuccess\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != false
@@ -2620,7 +2539,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: true, level: :MAY, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Success: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -2644,7 +2562,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mSuccess: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mSuccess\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != false
@@ -2652,7 +2570,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: false, level: :MAY, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Success: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -2676,7 +2593,7 @@ end
 
 raise if actual.char != "."
 raise if actual.colored_char != "\e[32m.\e[0m"
-raise if actual.colored_string != "\e[32mSuccess: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[32m\e[1mSuccess\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "✅"
 raise if actual.error? != false
@@ -2684,7 +2601,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: false, level: :MAY, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Success: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -2707,8 +2623,8 @@ actual = begin
 end
 
 raise if actual.char != "F"
-raise if actual.colored_char != "\e[32mF\e[0m"
-raise if actual.colored_string != "\e[32mFailure: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_char != "\e[35mF\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -2716,7 +2632,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: true, level: :MUST, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Failure: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -2739,8 +2654,8 @@ actual = begin
 end
 
 raise if actual.char != "F"
-raise if actual.colored_char != "\e[32mF\e[0m"
-raise if actual.colored_string != "\e[32mFailure: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_char != "\e[35mF\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -2748,7 +2663,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: true, level: :MUST, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Failure: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -2771,8 +2685,8 @@ actual = begin
 end
 
 raise if actual.char != "F"
-raise if actual.colored_char != "\e[32mF\e[0m"
-raise if actual.colored_string != "\e[32mFailure: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_char != "\e[35mF\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -2780,7 +2694,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: false, level: :MUST, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Failure: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -2803,8 +2716,8 @@ actual = begin
 end
 
 raise if actual.char != "F"
-raise if actual.colored_char != "\e[32mF\e[0m"
-raise if actual.colored_string != "\e[32mFailure: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_char != "\e[35mF\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -2812,7 +2725,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: false, level: :MUST, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Failure: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -2835,8 +2747,8 @@ actual = begin
 end
 
 raise if actual.char != "F"
-raise if actual.colored_char != "\e[32mF\e[0m"
-raise if actual.colored_string != "\e[32mFailure: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_char != "\e[35mF\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -2844,7 +2756,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: true, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Failure: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -2867,8 +2778,8 @@ actual = begin
 end
 
 raise if actual.char != "F"
-raise if actual.colored_char != "\e[32mF\e[0m"
-raise if actual.colored_string != "\e[32mFailure: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_char != "\e[35mF\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -2876,7 +2787,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: true, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Failure: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -2899,8 +2809,8 @@ actual = begin
 end
 
 raise if actual.char != "F"
-raise if actual.colored_char != "\e[32mF\e[0m"
-raise if actual.colored_string != "\e[32mFailure: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_char != "\e[35mF\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -2908,7 +2818,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: false, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Failure: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -2931,8 +2840,8 @@ actual = begin
 end
 
 raise if actual.char != "F"
-raise if actual.colored_char != "\e[32mF\e[0m"
-raise if actual.colored_string != "\e[32mFailure: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_char != "\e[35mF\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -2940,7 +2849,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: false, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Failure: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -2963,8 +2871,8 @@ actual = begin
 end
 
 raise if actual.char != "F"
-raise if actual.colored_char != "\e[32mF\e[0m"
-raise if actual.colored_string != "\e[32mFailure: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_char != "\e[35mF\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -2972,7 +2880,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: true, level: :MAY, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Failure: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -2995,8 +2902,8 @@ actual = begin
 end
 
 raise if actual.char != "F"
-raise if actual.colored_char != "\e[32mF\e[0m"
-raise if actual.colored_string != "\e[32mFailure: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_char != "\e[35mF\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -3004,7 +2911,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: true, level: :MAY, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Failure: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -3027,8 +2933,8 @@ actual = begin
 end
 
 raise if actual.char != "F"
-raise if actual.colored_char != "\e[32mF\e[0m"
-raise if actual.colored_string != "\e[32mFailure: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_char != "\e[35mF\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -3036,7 +2942,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: false, level: :MAY, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Failure: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -3059,8 +2964,8 @@ actual = begin
 end
 
 raise if actual.char != "F"
-raise if actual.colored_char != "\e[32mF\e[0m"
-raise if actual.colored_string != "\e[32mFailure: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_char != "\e[35mF\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -3068,7 +2973,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: true, matcher: :eql, negate: false, level: :MAY, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Failure: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -3092,7 +2996,7 @@ end
 
 raise if actual.char != "W"
 raise if actual.colored_char != "\e[33mW\e[0m"
-raise if actual.colored_string != "\e[33mWarning: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mWarning\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != false
@@ -3100,7 +3004,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: true, level: :MUST, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Warning: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -3124,7 +3027,7 @@ end
 
 raise if actual.char != "W"
 raise if actual.colored_char != "\e[33mW\e[0m"
-raise if actual.colored_string != "\e[33mWarning: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mWarning\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != false
@@ -3132,7 +3035,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: true, level: :MUST, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Warning: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -3156,7 +3058,7 @@ end
 
 raise if actual.char != "W"
 raise if actual.colored_char != "\e[33mW\e[0m"
-raise if actual.colored_string != "\e[33mWarning: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mWarning\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != false
@@ -3164,7 +3066,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: false, level: :MUST, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Warning: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -3188,7 +3089,7 @@ end
 
 raise if actual.char != "W"
 raise if actual.colored_char != "\e[33mW\e[0m"
-raise if actual.colored_string != "\e[33mWarning: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mWarning\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != false
@@ -3196,7 +3097,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: false, level: :MUST, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Warning: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -3220,7 +3120,7 @@ end
 
 raise if actual.char != "W"
 raise if actual.colored_char != "\e[33mW\e[0m"
-raise if actual.colored_string != "\e[33mWarning: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mWarning\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != false
@@ -3228,7 +3128,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: true, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Warning: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -3252,7 +3151,7 @@ end
 
 raise if actual.char != "W"
 raise if actual.colored_char != "\e[33mW\e[0m"
-raise if actual.colored_string != "\e[33mWarning: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mWarning\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != false
@@ -3260,7 +3159,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: true, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Warning: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -3284,7 +3182,7 @@ end
 
 raise if actual.char != "W"
 raise if actual.colored_char != "\e[33mW\e[0m"
-raise if actual.colored_string != "\e[33mWarning: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mWarning\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != false
@@ -3292,7 +3190,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: false, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Warning: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -3316,7 +3213,7 @@ end
 
 raise if actual.char != "W"
 raise if actual.colored_char != "\e[33mW\e[0m"
-raise if actual.colored_string != "\e[33mWarning: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mWarning\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != false
@@ -3324,7 +3221,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: false, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Warning: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -3348,7 +3244,7 @@ end
 
 raise if actual.char != "W"
 raise if actual.colored_char != "\e[33mW\e[0m"
-raise if actual.colored_string != "\e[33mWarning: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mWarning\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != false
@@ -3356,7 +3252,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: true, level: :MAY, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Warning: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -3380,7 +3275,7 @@ end
 
 raise if actual.char != "W"
 raise if actual.colored_char != "\e[33mW\e[0m"
-raise if actual.colored_string != "\e[33mWarning: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mWarning\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != false
@@ -3388,7 +3283,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: true, level: :MAY, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Warning: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -3412,7 +3306,7 @@ end
 
 raise if actual.char != "W"
 raise if actual.colored_char != "\e[33mW\e[0m"
-raise if actual.colored_string != "\e[33mWarning: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mWarning\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != false
@@ -3420,7 +3314,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: false, level: :MAY, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Warning: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -3444,7 +3337,7 @@ end
 
 raise if actual.char != "W"
 raise if actual.colored_char != "\e[33mW\e[0m"
-raise if actual.colored_string != "\e[33mWarning: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[33m\e[1mWarning\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "⚠️"
 raise if actual.error? != false
@@ -3452,7 +3345,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: false, level: :MAY, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Warning: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -3476,7 +3368,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -3484,7 +3376,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: true, level: :MUST, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Failure: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -3508,7 +3399,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -3516,7 +3407,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: true, level: :MUST, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Failure: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -3540,7 +3430,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -3548,7 +3438,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: false, level: :MUST, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Failure: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -3572,7 +3461,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -3580,7 +3469,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: false, level: :MUST, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Failure: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -3604,7 +3492,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -3612,7 +3500,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: true, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Failure: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -3636,7 +3523,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -3644,7 +3531,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: true, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Failure: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -3668,7 +3554,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -3676,7 +3562,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: false, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Failure: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -3700,7 +3585,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -3708,7 +3593,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: false, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Failure: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -3732,7 +3616,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -3740,7 +3624,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: true, level: :MAY, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Failure: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -3764,7 +3647,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -3772,7 +3655,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: true, level: :MAY, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Failure: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -3796,7 +3678,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -3804,7 +3686,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: false, level: :MAY, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Failure: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -3828,7 +3709,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -3836,7 +3717,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: false, matcher: :eql, negate: false, level: :MAY, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Failure: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -3859,8 +3739,8 @@ actual = begin
 end
 
 raise if actual.char != "I"
-raise if actual.colored_char != "\e[31mI\e[0m"
-raise if actual.colored_string != "\e[31mInfo: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_char != "\e[36mI\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mInfo\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != false
@@ -3868,7 +3748,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: true, level: :MUST, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Info: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -3891,8 +3770,8 @@ actual = begin
 end
 
 raise if actual.char != "I"
-raise if actual.colored_char != "\e[31mI\e[0m"
-raise if actual.colored_string != "\e[31mInfo: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_char != "\e[36mI\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mInfo\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != false
@@ -3900,7 +3779,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: true, level: :MUST, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Info: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -3923,8 +3801,8 @@ actual = begin
 end
 
 raise if actual.char != "I"
-raise if actual.colored_char != "\e[31mI\e[0m"
-raise if actual.colored_string != "\e[31mInfo: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_char != "\e[36mI\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mInfo\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != false
@@ -3932,7 +3810,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: false, level: :MUST, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Info: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -3955,8 +3832,8 @@ actual = begin
 end
 
 raise if actual.char != "I"
-raise if actual.colored_char != "\e[31mI\e[0m"
-raise if actual.colored_string != "\e[31mInfo: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_char != "\e[36mI\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mInfo\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != false
@@ -3964,7 +3841,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: false, level: :MUST, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Info: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -3987,8 +3863,8 @@ actual = begin
 end
 
 raise if actual.char != "I"
-raise if actual.colored_char != "\e[31mI\e[0m"
-raise if actual.colored_string != "\e[31mInfo: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_char != "\e[36mI\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mInfo\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != false
@@ -3996,7 +3872,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: true, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Info: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -4019,8 +3894,8 @@ actual = begin
 end
 
 raise if actual.char != "I"
-raise if actual.colored_char != "\e[31mI\e[0m"
-raise if actual.colored_string != "\e[31mInfo: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_char != "\e[36mI\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mInfo\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != false
@@ -4028,7 +3903,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: true, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Info: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -4051,8 +3925,8 @@ actual = begin
 end
 
 raise if actual.char != "I"
-raise if actual.colored_char != "\e[31mI\e[0m"
-raise if actual.colored_string != "\e[31mInfo: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_char != "\e[36mI\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mInfo\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != false
@@ -4060,7 +3934,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: false, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Info: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -4083,8 +3956,8 @@ actual = begin
 end
 
 raise if actual.char != "I"
-raise if actual.colored_char != "\e[31mI\e[0m"
-raise if actual.colored_string != "\e[31mInfo: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_char != "\e[36mI\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mInfo\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != false
@@ -4092,7 +3965,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: false, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Info: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -4115,8 +3987,8 @@ actual = begin
 end
 
 raise if actual.char != "I"
-raise if actual.colored_char != "\e[31mI\e[0m"
-raise if actual.colored_string != "\e[31mInfo: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_char != "\e[36mI\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mInfo\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != false
@@ -4124,7 +3996,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: true, level: :MAY, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Info: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -4147,8 +4018,8 @@ actual = begin
 end
 
 raise if actual.char != "I"
-raise if actual.colored_char != "\e[31mI\e[0m"
-raise if actual.colored_string != "\e[31mInfo: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_char != "\e[36mI\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mInfo\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != false
@@ -4156,7 +4027,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: true, level: :MAY, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Info: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != true
@@ -4179,8 +4049,8 @@ actual = begin
 end
 
 raise if actual.char != "I"
-raise if actual.colored_char != "\e[31mI\e[0m"
-raise if actual.colored_string != "\e[31mInfo: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_char != "\e[36mI\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mInfo\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != false
@@ -4188,7 +4058,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: false, level: :MAY, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Info: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -4211,8 +4080,8 @@ actual = begin
 end
 
 raise if actual.char != "I"
-raise if actual.colored_char != "\e[31mI\e[0m"
-raise if actual.colored_string != "\e[31mInfo: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_char != "\e[36mI\e[0m"
+raise if actual.colored_string != "\e[36m\e[1mInfo\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "💡"
 raise if actual.error? != false
@@ -4220,7 +4089,6 @@ raise if actual.failed? != false
 raise if actual.failure? != false
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Pass(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: false, level: :MAY, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Info: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != true
@@ -4244,7 +4112,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -4252,7 +4120,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: true, level: :MUST, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Failure: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -4276,7 +4143,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -4284,7 +4151,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: true, level: :MUST, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Failure: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -4308,7 +4174,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -4316,7 +4182,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: false, level: :MUST, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Failure: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -4340,7 +4205,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -4348,7 +4213,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: false, level: :MUST, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Failure: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -4372,7 +4236,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -4380,7 +4244,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: true, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Failure: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -4404,7 +4267,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -4412,7 +4275,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: true, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Failure: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -4436,7 +4298,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -4444,7 +4306,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: false, level: :SHOULD, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Failure: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -4468,7 +4329,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -4476,7 +4337,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: false, level: :SHOULD, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Failure: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -4500,7 +4360,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -4508,7 +4368,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: true, level: :MAY, valid: true)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Failure: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -4532,7 +4391,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" not to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" not to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -4540,7 +4399,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: true, level: :MAY, valid: false)"
-raise if actual.maybe_negate != " not"
 raise if actual.message != "Failure: expected \"foo\" not to eql 42."
 raise if actual.negate? != true
 raise if actual.passed? != false
@@ -4564,7 +4422,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -4572,7 +4430,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: false, level: :MAY, valid: true)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Failure: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != false
@@ -4596,7 +4453,7 @@ end
 
 raise if actual.char != "F"
 raise if actual.colored_char != "\e[35mF\e[0m"
-raise if actual.colored_string != "\e[35mFailure: expected \"foo\" to eql 42.\e[0m"
+raise if actual.colored_string != "\e[35m\e[1mFailure\e[22m: expected \"foo\" to eql 42.\e[0m"
 raise if actual.definition != "eql 42"
 raise if actual.emoji != "❌"
 raise if actual.error? != false
@@ -4604,7 +4461,6 @@ raise if actual.failed? != true
 raise if actual.failure? != true
 raise if actual.info? != false
 raise if actual.inspect != "Expresenter::Fail(actual: \"foo\", error: nil, expected: 42, got: nil, matcher: :eql, negate: false, level: :MAY, valid: false)"
-raise if actual.maybe_negate != ""
 raise if actual.message != "Failure: expected \"foo\" to eql 42."
 raise if actual.negate? != false
 raise if actual.passed? != false

@@ -3,6 +3,8 @@
 module Expresenter
   # Common collection of methods.
   module Common
+    SPACE = " "
+
     # @return [#object_id] Returned value by the challenged subject.
     attr_reader :actual
 
@@ -76,14 +78,7 @@ module Expresenter
     #
     # @return [String] A readable string of the definition.
     def definition
-      [matcher, expected&.inspect].compact.join(" ")
-    end
-
-    # The negation, if any.
-    #
-    # @return [String] The negation, or an empty string.
-    def maybe_negate
-      negate? ? " not" : ""
+      [matcher, expected&.inspect].compact.join(SPACE)
     end
 
     # The summary of the result.
@@ -95,9 +90,9 @@ module Expresenter
       elsif actual.is_a?(::Exception)
         actual.message
       elsif actual == expected
-        "expected#{maybe_negate} to #{definition}"
+        ["expected", negation, "to", definition].compact.join(SPACE)
       else
-        "expected #{actual.inspect}#{maybe_negate} to #{definition}"
+        ["expected", actual.inspect, negation, "to", definition].compact.join(SPACE)
       end
     end
 
@@ -112,7 +107,7 @@ module Expresenter
     #
     # @return [String] A string representing the result.
     def colored_string
-      color(to_s)
+      color(to_bold_s)
     end
 
     # The representation of the result.
@@ -135,18 +130,18 @@ module Expresenter
 
     protected
 
-    def color(str)
-      if success?
-        "\e[32m#{str}\e[0m"
-      elsif info?
-        "\e[36m#{str}\e[0m"
-      elsif warning?
-        "\e[33m#{str}\e[0m"
-      elsif failure?
-        "\e[35m#{str}\e[0m"
-      else
-        "\e[31m#{str}\e[0m"
-      end
+    # The negation, if any.
+    #
+    # @return [String, nil] The negation, or an empty string.
+    def negation
+      "not" if negate?
+    end
+
+    # The representation of the result with the title in bold.
+    #
+    # @return [String] A string representing the result with the title in bold.
+    def to_bold_s
+      "\e[1m#{titre}\e[22m: #{summary}."
     end
   end
 end

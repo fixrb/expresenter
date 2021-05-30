@@ -5,6 +5,12 @@ require_relative "common"
 module Expresenter
   # The class that is responsible for reporting that an expectation is false.
   class Fail < ::StandardError
+    FAILURE_CHAR  = "F"
+    FAILURE_EMOJI = "❌"
+
+    ERROR_CHAR    = "E"
+    ERROR_EMOJI   = "💥"
+
     include Common
 
     # @param (see Fail#initialize)
@@ -83,9 +89,9 @@ module Expresenter
     # @return [String] The char that identify the result.
     def char
       if failure?
-        "F"
+        FAILURE_CHAR
       else
-        "E"
+        ERROR_CHAR
       end
     end
 
@@ -94,9 +100,19 @@ module Expresenter
     # @return [String] The emoji that identify the result.
     def emoji
       if failure?
-        "❌"
+        FAILURE_EMOJI
       else
-        "💥"
+        ERROR_EMOJI
+      end
+    end
+
+    protected
+
+    def color(str)
+      if failure?
+        "\e[35m#{str}\e[0m" # purple
+      else
+        "\e[31m#{str}\e[0m" # red
       end
     end
   end
