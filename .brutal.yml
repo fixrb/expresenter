@@ -39,6 +39,7 @@ contexts:
     - true
     - false
   matcher:
+    - be_an_instance_of
     - eql
   level:
     - MUST

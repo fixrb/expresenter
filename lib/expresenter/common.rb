@@ -18,7 +18,7 @@ module Expresenter
     #   actual value and the expected value through the matcher.
     attr_reader :got
 
-    # @return [#object_id] The matcher.
+    # @return [Symbol] The matcher.
     attr_reader :matcher
 
     # @return [:MUST, :SHOULD, :MAY] The requirement level of the expectation.
@@ -78,7 +78,7 @@ module Expresenter
     #
     # @return [String] A readable string of the definition.
     def definition
-      [matcher, expected&.inspect].compact.join(SPACE)
+      [matcher.to_s.tr("_", " "), expected&.inspect].compact.join(SPACE)
     end
 
     # The summary of the result.
