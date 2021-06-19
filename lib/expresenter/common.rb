@@ -3,6 +3,7 @@
 module Expresenter
   # Common collection of methods.
   module Common
+    # White space.
     SPACE = " "
 
     # @return [#object_id] Returned value by the challenged subject.
@@ -52,14 +53,6 @@ module Expresenter
       got.equal?(true)
     end
 
-    # The value of the boolean comparison between the actual value and the
-    # expected value.
-    #
-    # @return [Boolean] The test was true or false?
-    def valid?
-      @valid
-    end
-
     # A string containing a human-readable representation of the result.
     #
     # @return [String] The human-readable representation of the result.
@@ -70,8 +63,7 @@ module Expresenter
                     "got: #{got.inspect}, "           \
                     "matcher: #{matcher.inspect}, "   \
                     "negate: #{negate?.inspect}, "    \
-                    "level: #{level.inspect}, "       \
-                    "valid: #{valid?.inspect})"       \
+                    "level: #{level.inspect}"         \
     end
 
     # The readable definition.

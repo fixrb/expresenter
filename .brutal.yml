@@ -12,7 +12,15 @@ header: |
 
 subject: |
   begin
-    Expresenter.call(%{is_passed}).with(actual: "%{actual}", error: %{error}, expected: %{expected}, got: %{got}, negate: %{negate}, valid: %{valid}, matcher: :%{matcher}, level: :%{level})
+    Expresenter.call(%{is_passed}).with(
+      actual:   %{actual},
+      error:    %{error},
+      expected: %{expected},
+      got:      %{got},
+      negate:   %{negate},
+      matcher:  :%{matcher},
+      level:    :%{level}
+    )
   rescue ::Expresenter::Fail => e
     e
   end
@@ -22,20 +30,19 @@ contexts:
     - true
     - false
   actual:
-    - foo
+    - '"foo"'
+    - '"bar"'
+    - ZeroDivisionError.new
   error:
     - Exception.new("BOOM")
     - nil
   expected:
-    - 42
+    - '"foo"'
   got:
     - true
     - false
     - nil
   negate:
-    - true
-    - false
-  valid:
     - true
     - false
   matcher:
@@ -58,7 +65,6 @@ actuals:
   - "%{subject}.negate?"
   - "%{subject}.error?"
   - "%{subject}.success?"
-  - "%{subject}.valid?"
   - "%{subject}.inspect"
   - "%{subject}.definition"
   - "%{subject}.summary"

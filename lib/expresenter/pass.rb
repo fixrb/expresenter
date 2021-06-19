@@ -5,13 +5,22 @@ require_relative "common"
 module Expresenter
   # The class that is responsible for reporting that an expectation is true.
   class Pass
+    # Char representing an info.
     INFO_CHAR     = "I"
+
+    # Emoji representing an info.
     INFO_EMOJI    = "💡"
 
+    # Char representing a success.
     SUCCESS_CHAR  = "."
+
+    # Emoji representing a success.
     SUCCESS_EMOJI = "✅"
 
+    # Char representing a warning.
     WARNING_CHAR  = "W"
+
+    # Emoji representing a warning.
     WARNING_EMOJI = "⚠️"
 
     include Common
@@ -32,18 +41,14 @@ module Expresenter
     # @param got      [Boolean, nil] The result of the boolean comparison
     #   between the actual value and the expected value through the matcher.
     # @param negate   [Boolean] Evaluated to a negative assertion?
-    # @param valid    [Boolean] Report if the test was true or false?
     # @param matcher  [Symbol] The matcher.
     # @param level    [:MUST, :SHOULD, :MAY] The requirement level.
-    def initialize(actual:, error:, expected:, got:, negate:, valid:,
-                   matcher:, level:)
-
+    def initialize(actual:, error:, expected:, got:, negate:, matcher:, level:)
       @actual   = actual
       @error    = error
       @expected = expected
       @got      = got
       @negate   = negate
-      @valid    = valid
       @matcher  = matcher
       @level    = level
     end

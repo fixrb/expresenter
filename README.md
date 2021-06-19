@@ -66,7 +66,6 @@ The following parameters are required to instantiate the result:
 * `expected`: The expected value.
 * `got`: The result of the boolean comparison between the actual value and the expected value through the matcher.
 * `negate`: Evaluated to a negative assertion?
-* `valid`: Report if the test was `true` or `false`.
 * `matcher`: The symbol representing a matcher.
 * `level`: The requirement level (`:MUST`, `:SHOULD` or `:MAY`).
 
@@ -75,7 +74,7 @@ The following parameters are required to instantiate the result:
 A passed expectation:
 
 ```ruby
-result = Expresenter.call(true).new(actual: "FOO", error: nil, expected: "foo", got: true, negate: true, valid: true, matcher: :eql, level: :MUST)
+result = Expresenter.call(true).new(actual: "FOO", error: nil, expected: "foo", got: true, negate: true, matcher: :eql, level: :MUST)
 
 result.failed? # => false
 result.failure? # => false
@@ -88,8 +87,7 @@ result.passed? # => true
 result.negate? # => true
 result.error? # => false
 result.success? # => true
-result.valid? # => true
-result.inspect # => "Expresenter::Pass(actual: \"FOO\", error: nil, expected: \"foo\", got: true, matcher: :eql, negate: true, level: :MUST, valid: true)"
+result.inspect # => "Expresenter::Pass(actual: \"FOO\", error: nil, expected: \"foo\", got: true, matcher: :eql, negate: true, level: :MUST)"
 result.definition # => "eql \"foo\""
 result.summary # => "expected \"FOO\" not to eql \"foo\""
 result.colored_char # => "\e[32m.\e[0m"
@@ -102,7 +100,7 @@ result.titre # => "Success"
 A failed expectation:
 
 ```ruby
-result = Expresenter.call(false).new(actual: "foo", error: Exception.new("BOOM"), expected: 42, got: true, negate: true, valid: true, matcher: :eql, level: :MUST)
+result = Expresenter.call(false).new(actual: "foo", error: Exception.new("BOOM"), expected: 42, got: true, negate: true, matcher: :eql, level: :MUST)
 
 result.failed? # => true
 result.failure? # => false
@@ -115,8 +113,7 @@ result.passed? # => false
 result.negate? # => true
 result.error? # => true
 result.success? # => true
-result.valid? # => true
-result.inspect # => "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: true, level: :MUST, valid: true)"
+result.inspect # => "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: true, level: :MUST)"
 result.definition # => "eql 42"
 result.summary # => "BOOM"
 result.colored_char # => "\e[31mE\e[0m"
@@ -133,13 +130,13 @@ To return the results which pass, and to raise the results which fail, the `with
 In this example, the result passes, the instance is therefore returned:
 
 ```ruby
-Expresenter.call(true).with(actual: "FOO", error: nil, expected: "foo", got: true, negate: true, valid: true, matcher: :eql, level: :MUST) # => Expresenter::Pass(actual: "FOO", error: nil, expected: "foo", got: true, matcher: :eql, negate: true, level: :MUST, valid: true)
+Expresenter.call(true).with(actual: "FOO", error: nil, expected: "foo", got: true, negate: true, matcher: :eql, level: :MUST) # => Expresenter::Pass(actual: "FOO", error: nil, expected: "foo", got: true, matcher: :eql, negate: true, level: :MUST)
 ```
 
 In this example, the result fails, so the exception is raised:
 
 ```ruby
-Expresenter.call(false).with(actual: "foo", error: Exception.new("BOOM"), expected: 42, got: true, negate: true, valid: true, matcher: :eql, level: :MUST)
+Expresenter.call(false).with(actual: "foo", error: Exception.new("BOOM"), expected: 42, got: true, negate: true, matcher: :eql, level: :MUST)
 ```
 
 > Traceback (most recent call last):
