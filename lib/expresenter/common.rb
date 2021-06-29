@@ -57,13 +57,13 @@ module Expresenter
     #
     # @return [String] The human-readable representation of the result.
     def inspect
-      "#{self.class}(actual: #{actual.inspect}, "     \
-                    "error: #{error.inspect}, "       \
-                    "expected: #{expected.inspect}, " \
-                    "got: #{got.inspect}, "           \
-                    "matcher: #{matcher.inspect}, "   \
-                    "negate: #{negate?.inspect}, "    \
-                    "level: #{level.inspect}"         \
+      "#{self.class}(actual: #{actual.inspect}, " \
+        "error: #{error.inspect}, "               \
+        "expected: #{expected.inspect}, "         \
+        "got: #{got.inspect}, "                   \
+        "matcher: #{matcher.inspect}, "           \
+        "negate: #{negate?.inspect}, "            \
+        "level: #{level.inspect}"                 \
     end
 
     # The readable definition.

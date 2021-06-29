@@ -1,9 +1,10 @@
 # Expresenter
 
-[![Build Status](https://api.travis-ci.org/fixrb/expresenter.svg?branch=main)][travis]
-[![Gem Version](https://badge.fury.io/rb/expresenter.svg)][gem]
-[![Inline docs](https://inch-ci.org/github/fixrb/expresenter.svg?branch=main)][inchpages]
-[![Documentation](https://img.shields.io/:yard-docs-38c800.svg)][rubydoc]
+[![Version](https://img.shields.io/github/v/tag/fixrb/expresenter?label=Version&logo=github)](https://github.com/fixrb/expresenter/releases)
+[![Yard documentation](https://img.shields.io/badge/Yard-documentation-blue.svg?logo=github)](https://rubydoc.info/github/fixrb/expresenter/main)
+[![CI](https://github.com/fixrb/expresenter/workflows/CI/badge.svg?branch=main)](https://github.com/fixrb/expresenter/actions?query=workflow%3Aci+branch%3Amain)
+[![RuboCop](https://github.com/fixrb/expresenter/workflows/RuboCop/badge.svg?branch=main)](https://github.com/fixrb/expresenter/actions?query=workflow%3Arubocop+branch%3Amain)
+[![License](https://img.shields.io/github/license/fixrb/expresenter?label=License&logo=github)](https://github.com/fixrb/expresenter/raw/main/LICENSE.md)
 
 > Expectation result presenter.
 
@@ -171,8 +172,3 @@ The [gem](https://rubygems.org/gems/expresenter) is available as open source und
     src="https://github.com/fixrb/expresenter/raw/main/img/sashite.png"
     alt="Sashite" /></a>
 </p>
-
-[gem]: https://rubygems.org/gems/expresenter
-[travis]: https://travis-ci.org/fixrb/expresenter
-[inchpages]: https://inch-ci.org/github/fixrb/expresenter
-[rubydoc]: https://rubydoc.info/gems/expresenter/frames
