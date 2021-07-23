@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.summary      = "Expectation result presenter."
   spec.description  = spec.summary
   spec.homepage     = "https://github.com/fixrb/expresenter"
-  spec.required_ruby_version = Gem::Requirement.new(">= 2.7.0")
+  spec.required_ruby_version = ::Gem::Requirement.new(">= 2.7.0")
   spec.license      = "MIT"
   spec.files        = Dir["LICENSE.md", "README.md", "lib/**/*"]
 

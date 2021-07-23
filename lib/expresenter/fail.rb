@@ -27,22 +27,23 @@ module Expresenter
 
     # Initialize method.
     #
-    # @param actual   [#object_id] Returned value by the challenged subject.
-    # @param error    [Exception, nil] Any possible raised exception.
-    # @param expected [#object_id] The expected value.
-    # @param got      [Boolean, nil] The result of the boolean comparison
+    # @param actual     [#object_id] Returned value by the challenged subject.
+    # @param definition [String] A readable string of the matcher and any
+    #   expected values.
+    # @param error      [Exception, nil] Any possible raised exception.
+    # @param expected   [#object_id] The expected value.
+    # @param got        [Boolean, nil] The result of the boolean comparison
     #   between the actual value and the expected value through the matcher.
-    # @param negate   [Boolean] Evaluated to a negative assertion?
-    # @param matcher  [Symbol] The matcher.
-    # @param level    [:MUST, :SHOULD, :MAY] The requirement level.
-    def initialize(actual:, error:, expected:, got:, negate:, matcher:, level:)
-      @actual   = actual
-      @error    = error
-      @expected = expected
-      @got      = got
-      @negate   = negate
-      @matcher  = matcher
-      @level    = level
+    # @param negate     [Boolean] Evaluated to a negative assertion?
+    # @param level      [:MUST, :SHOULD, :MAY] The requirement level.
+    def initialize(actual:, definition:, error:, expected:, got:, negate:, level:)
+      @actual     = actual
+      @definition = definition
+      @error      = error
+      @expected   = expected
+      @got        = got
+      @negate     = negate
+      @level      = level
 
       super(to_s)
     end

@@ -63,11 +63,11 @@ Failed expectations can be classified as:
 The following parameters are required to instantiate the result:
 
 * `actual`: Returned value by the challenged subject.
+* `definition`: A readable string of the matcher and any expected values.
 * `error`: Any possible raised exception.
 * `expected`: The expected value.
 * `got`: The result of the boolean comparison between the actual value and the expected value through the matcher.
 * `negate`: Evaluated to a negative assertion?
-* `matcher`: The symbol representing a matcher.
 * `level`: The requirement level (`:MUST`, `:SHOULD` or `:MAY`).
 
 #### Examples
@@ -75,7 +75,7 @@ The following parameters are required to instantiate the result:
 A passed expectation:
 
 ```ruby
-result = Expresenter.call(true).new(actual: "FOO", error: nil, expected: "foo", got: true, negate: true, matcher: :eql, level: :MUST)
+result = Expresenter.call(true).new(actual: "FOO", definition: 'eq "foo"', error: nil, expected: "foo", got: true, negate: true, level: :MUST)
 
 result.failed? # => false
 result.failure? # => false
@@ -88,20 +88,20 @@ result.passed? # => true
 result.negate? # => true
 result.error? # => false
 result.success? # => true
-result.inspect # => "Expresenter::Pass(actual: \"FOO\", error: nil, expected: \"foo\", got: true, matcher: :eql, negate: true, level: :MUST)"
-result.definition # => "eql \"foo\""
-result.summary # => "expected \"FOO\" not to eql \"foo\""
+result.inspect # => "Expresenter::Pass(actual: \"FOO\", definition: \"eq \\\"foo\\\"\", error: nil, expected: \"foo\", got: true, negate: true, level: :MUST)"
+result.definition # => "eq \"foo\""
+result.summary # => "expected \"FOO\" not to eq \"foo\""
 result.colored_char # => "\e[32m.\e[0m"
-result.colored_string # => "\e[32m\e[1mSuccess\e[22m: expected \"FOO\" not to eql \"foo\".\e[0m"
-result.message # => "Success: expected \"FOO\" not to eql \"foo\"."
-result.to_s # => "Success: expected \"FOO\" not to eql \"foo\"."
+result.colored_string # => "\e[32m\e[1mSuccess\e[22m: expected \"FOO\" not to eq \"foo\".\e[0m"
+result.message # => "Success: expected \"FOO\" not to eq \"foo\"."
+result.to_s # => "Success: expected \"FOO\" not to eq \"foo\"."
 result.titre # => "Success"
 ```
 
 A failed expectation:
 
 ```ruby
-result = Expresenter.call(false).new(actual: "foo", error: Exception.new("BOOM"), expected: 42, got: true, negate: true, matcher: :eql, level: :MUST)
+result = Expresenter.call(false).new(actual: "foo", definition: "eq 42", error: Exception.new("BOOM"), expected: 42, got: true, negate: true, level: :MUST)
 
 result.failed? # => true
 result.failure? # => false
@@ -114,8 +114,8 @@ result.passed? # => false
 result.negate? # => true
 result.error? # => true
 result.success? # => true
-result.inspect # => "Expresenter::Fail(actual: \"foo\", error: #<Exception: BOOM>, expected: 42, got: true, matcher: :eql, negate: true, level: :MUST)"
-result.definition # => "eql 42"
+result.inspect # => "Expresenter::Fail(actual: \"foo\", definition: \"eq 42\", error: #<Exception: BOOM>, expected: 42, got: true, negate: true, level: :MUST)"
+result.definition # => "eq 42"
 result.summary # => "BOOM"
 result.colored_char # => "\e[31mE\e[0m"
 result.colored_string # => "\e[31m\e[1mException\e[22m: BOOM.\e[0m"
@@ -131,19 +131,20 @@ To return the results which pass, and to raise the results which fail, the `with
 In this example, the result passes, the instance is therefore returned:
 
 ```ruby
-Expresenter.call(true).with(actual: "FOO", error: nil, expected: "foo", got: true, negate: true, matcher: :eql, level: :MUST) # => Expresenter::Pass(actual: "FOO", error: nil, expected: "foo", got: true, matcher: :eql, negate: true, level: :MUST)
+Expresenter.call(true).with(actual: "FOO", definition: 'eq "foo"', error: nil, expected: "foo", got: true, negate: true, level: :MUST) # => Expresenter::Pass(actual: "FOO", definition: "eq \"foo\"", error: nil, expected: "foo", got: true, negate: true, level: :MUST)
 ```
 
 In this example, the result fails, so the exception is raised:
 
 ```ruby
-Expresenter.call(false).with(actual: "foo", error: Exception.new("BOOM"), expected: 42, got: true, negate: true, matcher: :eql, level: :MUST)
+Expresenter.call(false).with(actual: "foo", definition: "eq 40", error: Exception.new("BOOM"), expected: 42, got: true, negate: true, level: :MUST)
 ```
 
 > Traceback (most recent call last):
->         3: from ./bin/console:7:in `<main>'
->         2: from (irb):1
->         1: from /Users/cyril/github/fixrb/expresenter/lib/expresenter/fail.rb:19:in `with'
+>         4: from ./bin/console:7:in `<main>'
+>         3: from (irb):42
+>         2: from (irb):43:in `rescue in irb_binding'
+>         1: from /Users/cyril/github/fixrb/expresenter/lib/expresenter/fail.rb:25:in `with'
 > Expresenter::Fail (Exception: BOOM.)
 
 ### More Examples

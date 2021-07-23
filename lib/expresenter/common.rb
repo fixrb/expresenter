@@ -9,6 +9,9 @@ module Expresenter
     # @return [#object_id] Returned value by the challenged subject.
     attr_reader :actual
 
+    # @return [String] A readable string of the matcher and any expected values.
+    attr_reader :definition
+
     # @return [Exception, nil] Any possible raised exception.
     attr_reader :error
 
@@ -18,9 +21,6 @@ module Expresenter
     # @return [#object_id] The result of the boolean comparison between the
     #   actual value and the expected value through the matcher.
     attr_reader :got
-
-    # @return [Symbol] The matcher.
-    attr_reader :matcher
 
     # @return [:MUST, :SHOULD, :MAY] The requirement level of the expectation.
     attr_reader :level
@@ -58,19 +58,12 @@ module Expresenter
     # @return [String] The human-readable representation of the result.
     def inspect
       "#{self.class}(actual: #{actual.inspect}, " \
+        "definition: #{definition.inspect}, "     \
         "error: #{error.inspect}, "               \
         "expected: #{expected.inspect}, "         \
         "got: #{got.inspect}, "                   \
-        "matcher: #{matcher.inspect}, "           \
         "negate: #{negate?.inspect}, "            \
-        "level: #{level.inspect}"                 \
-    end
-
-    # The readable definition.
-    #
-    # @return [String] A readable string of the definition.
-    def definition
-      [matcher.to_s.tr("_", " "), expected&.inspect].compact.join(SPACE)
+        "level: #{level.inspect})"
     end
 
     # The summary of the result.

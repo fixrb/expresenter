@@ -13,13 +13,13 @@ header: |
 subject: |
   begin
     Expresenter.call(%{is_passed}).with(
-      actual:   %{actual},
-      error:    %{error},
-      expected: %{expected},
-      got:      %{got},
-      negate:   %{negate},
-      matcher:  :%{matcher},
-      level:    :%{level}
+      actual:     %{actual},
+      error:      %{error},
+      expected:   "%{expected}",
+      got:        %{got},
+      negate:     %{negate},
+      definition: "%{definition}",
+      level:      :%{level}
     )
   rescue ::Expresenter::Fail => e
     e
@@ -37,7 +37,7 @@ contexts:
     - Exception.new("BOOM")
     - nil
   expected:
-    - '"foo"'
+    - foo
   got:
     - true
     - false
@@ -45,9 +45,9 @@ contexts:
   negate:
     - true
     - false
-  matcher:
-    - be_an_instance_of
-    - eql
+  definition:
+    - be an instance of 'foo'
+    - eql 'foo'
   level:
     - MUST
     - SHOULD
