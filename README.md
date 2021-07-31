@@ -163,7 +163,7 @@ __Expresenter__ follows [Semantic Versioning 2.0](https://semver.org/).
 
 ## License
 
-The [gem](https://rubygems.org/gems/expresenter) is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The [gem](https://rubygems.org/gems/expresenter) is available as open source under the terms of the [MIT License](https://github.com/fixrb/expresenter/raw/main/LICENSE.md).
 
 ***
 
