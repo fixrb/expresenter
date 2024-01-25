@@ -1,8 +1,8 @@
 # Expresenter
 
-[![Version](https://img.shields.io/github/v/tag/fixrb/expresenter?label=Version&logo=github)](https://github.com/fixrb/expresenter/releases)
+[![Version](https://img.shields.io/github/v/tag/fixrb/expresenter?label=Version&logo=github)](https://github.com/fixrb/expresenter/tags)
 [![Yard documentation](https://img.shields.io/badge/Yard-documentation-blue.svg?logo=github)](https://rubydoc.info/github/fixrb/expresenter/main)
-[![CI](https://github.com/fixrb/expresenter/workflows/CI/badge.svg?branch=main)](https://github.com/fixrb/expresenter/actions?query=workflow%3Aci+branch%3Amain)
+[![Ruby](https://github.com/fixrb/expresenter/workflows/Ruby/badge.svg?branch=main)](https://github.com/fixrb/expresenter/actions?query=workflow%3Aruby+branch%3Amain)
 [![RuboCop](https://github.com/fixrb/expresenter/workflows/RuboCop/badge.svg?branch=main)](https://github.com/fixrb/expresenter/actions?query=workflow%3Arubocop+branch%3Amain)
 [![License](https://img.shields.io/github/license/fixrb/expresenter?label=License&logo=github)](https://github.com/fixrb/expresenter/raw/main/LICENSE.md)
 
@@ -19,7 +19,7 @@ gem "expresenter"
 And then execute:
 
 ```sh
-bundle
+bundle install
 ```
 
 Or install it yourself as:
@@ -171,5 +171,5 @@ The [gem](https://rubygems.org/gems/expresenter) is available as open source und
   This project is sponsored by:<br />
   <a href="https://sashite.com/"><img
     src="https://github.com/fixrb/expresenter/raw/main/img/sashite.png"
-    alt="Sashite" /></a>
+    alt="Sashité" /></a>
 </p>

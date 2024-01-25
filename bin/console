@@ -4,4 +4,5 @@
 require "bundler/setup"
 require "expresenter"
 require "irb"
+
 IRB.start
