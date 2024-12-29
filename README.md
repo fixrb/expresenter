@@ -6,7 +6,16 @@
 [![RuboCop](https://github.com/fixrb/expresenter/workflows/RuboCop/badge.svg?branch=main)](https://github.com/fixrb/expresenter/actions?query=workflow%3Arubocop+branch%3Amain)
 [![License](https://img.shields.io/github/license/fixrb/expresenter?label=License&logo=github)](https://github.com/fixrb/expresenter/raw/main/LICENSE.md)
 
-> Expectation result presenter.
+> A Ruby gem for presenting test expectation results with rich formatting and requirement level support. Perfect for test frameworks and assertion libraries that need flexible result reporting with support for MUST/SHOULD/MAY requirement levels.
+
+## Features
+
+- Rich result formatting with colored output
+- Support for MUST/SHOULD/MAY requirement levels
+- Multiple result classification: success, warning, info, failure, and error
+- Emoji support for visual result indication (✅, ⚠️, 💡, ❌, 💥)
+- Flexible negation support for negative assertions
+- Detailed error reporting with custom messages
 
 ## Installation
 
