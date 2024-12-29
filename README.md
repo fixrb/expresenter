@@ -162,11 +162,6 @@ __Expresenter__ follows [Semantic Versioning 2.0](https://semver.org/).
 
 The [gem](https://rubygems.org/gems/expresenter) is available as open source under the terms of the [MIT License](https://github.com/fixrb/expresenter/raw/main/LICENSE.md).
 
-***
+## Sponsors
 
-<p>
-  This project is sponsored by:<br />
-  <a href="https://sashite.com/"><img
-    src="https://github.com/fixrb/expresenter/raw/main/img/sashite.png"
-    alt="Sashité" /></a>
-</p>
+This project is sponsored by [Sashité](https://sashite.com/)
