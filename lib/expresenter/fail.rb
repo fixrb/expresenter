@@ -31,16 +31,14 @@ module Expresenter
     # @param definition [String] A readable string of the matcher and any
     #   expected values.
     # @param error      [Exception, nil] Any possible raised exception.
-    # @param expected   [#object_id] The expected value.
     # @param got        [Boolean, nil] The result of the boolean comparison
     #   between the actual value and the expected value through the matcher.
     # @param negate     [Boolean] Evaluated to a negative assertion?
     # @param level      [:MUST, :SHOULD, :MAY] The requirement level.
-    def initialize(actual:, definition:, error:, expected:, got:, negate:, level:)
+    def initialize(actual:, definition:, error:, got:, negate:, level:)
       @actual     = actual
       @definition = definition
       @error      = error
-      @expected   = expected
       @got        = got
       @negate     = negate
       @level      = level

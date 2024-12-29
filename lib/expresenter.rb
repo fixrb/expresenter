@@ -3,7 +3,7 @@
 # Namespace for the Expresenter library.
 #
 # @example A passed expectation result presenter.
-#   Expresenter.call(true).with(actual: "FOO", definition: 'eql "foo"', error: nil, expected: "foo", got: true, negate: true, level: :MUST) # => Expresenter::Pass(actual: "FOO", definition: "eql \"foo\"", error: nil, expected: "foo", got: true, negate: true, level: :MUST)
+#   Expresenter.call(true).with(actual: "FOO", definition: 'eql "foo"', error: nil, got: true, negate: true, level: :MUST) # => Expresenter::Pass(actual: "FOO", definition: "eql \"foo\"", error: nil, got: true, negate: true, level: :MUST)
 module Expresenter
   # @param is_passed [Boolean] The value of an assertion.
   #

@@ -15,7 +15,6 @@ subject: |
     Expresenter.call(%{is_passed}).with(
       actual:     %{actual},
       error:      %{error},
-      expected:   "%{expected}",
       got:        %{got},
       negate:     %{negate},
       definition: "%{definition}",
@@ -36,8 +35,6 @@ contexts:
   error:
     - Exception.new("BOOM")
     - nil
-  expected:
-    - foo
   got:
     - true
     - false
@@ -65,7 +62,6 @@ actuals:
   - "%{subject}.negate?"
   - "%{subject}.error?"
   - "%{subject}.success?"
-  - "%{subject}.inspect"
   - "%{subject}.definition"
   - "%{subject}.summary"
   - "%{subject}.colored_char"

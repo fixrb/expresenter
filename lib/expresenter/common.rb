@@ -15,9 +15,6 @@ module Expresenter
     # @return [Exception, nil] Any possible raised exception.
     attr_reader :error
 
-    # @return [#object_id] The expected value.
-    attr_reader :expected
-
     # @return [#object_id] The result of the boolean comparison between the
     #   actual value and the expected value through the matcher.
     attr_reader :got
@@ -53,19 +50,6 @@ module Expresenter
       got.equal?(true)
     end
 
-    # A string containing a human-readable representation of the result.
-    #
-    # @return [String] The human-readable representation of the result.
-    def inspect
-      "#{self.class}(actual: #{actual.inspect}, " \
-        "definition: #{definition.inspect}, " \
-        "error: #{error.inspect}, " \
-        "expected: #{expected.inspect}, " \
-        "got: #{got.inspect}, " \
-        "negate: #{negate?.inspect}, " \
-        "level: #{level.inspect})"
-    end
-
     # The summary of the result.
     #
     # @return [String] A string representing the summary of the result.
@@ -74,8 +58,6 @@ module Expresenter
         error.message
       elsif actual.is_a?(::Exception)
         actual.message
-      elsif actual == expected
-        ["expected", negation, "to", definition].compact.join(SPACE)
       else
         ["expected", actual.inspect, negation, "to", definition].compact.join(SPACE)
       end
