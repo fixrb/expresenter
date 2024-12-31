@@ -3,46 +3,103 @@
 require_relative "common"
 
 module Expresenter
-  # The class that is responsible for reporting that an expectation is true.
+  # Class responsible for handling and reporting successful test expectations.
+  #
+  # The Pass class represents test results that didn't fail, but can be in different states:
+  # - Success: Test passed completely as expected
+  # - Warning: Test passed but with some concerns (typically for :SHOULD or :MAY requirements)
+  # - Info: Test passed but with additional information to note
+  #
+  # Each state has its own character indicator, emoji, and color for easy visual identification
+  # in test output:
+  # - Success: "." (green) ✅
+  # - Warning: "W" (yellow) ⚠️
+  # - Info: "I" (blue) 💡
+  #
+  # @example Creating a successful test result
+  #   result = Expresenter::Pass.new(
+  #     actual: "foo",
+  #     definition: 'eq "foo"',
+  #     error: nil,
+  #     got: true,
+  #     negate: false,
+  #     level: :MUST
+  #   )
+  #   result.success?   # => true
+  #   result.warning?   # => false
+  #   result.info?      # => false
+  #   result.to_sym    # => :success
+  #   result.char      # => "."
+  #   result.emoji     # => "✅"
+  #   result.to_s      # => "Success: expected \"foo\" to eq \"foo\"."
+  #
+  # @example Creating a warning result
+  #   result = Expresenter::Pass.new(
+  #     actual: "foo",
+  #     definition: 'eq "foo"',
+  #     error: nil,
+  #     got: false,  # Warning state is triggered when got: false
+  #     negate: false,
+  #     level: :SHOULD
+  #   )
+  #   result.warning?   # => true
+  #   result.to_sym    # => :warning
+  #   result.char      # => "W"
+  #   result.emoji     # => "⚠️"
   class Pass
-    # Char representing an info.
+    # Single character indicator for informational results.
+    # @api private
     INFO_CHAR     = "I"
 
-    # Emoji representing an info.
+    # Emoji indicator for informational results.
+    # @api private
     INFO_EMOJI    = "💡"
 
-    # Char representing a success.
+    # Single character indicator for successful results.
+    # @api private
     SUCCESS_CHAR  = "."
 
-    # Emoji representing a success.
+    # Emoji indicator for successful results.
+    # @api private
     SUCCESS_EMOJI = "✅"
 
-    # Char representing a warning.
+    # Single character indicator for warning results.
+    # @api private
     WARNING_CHAR  = "W"
 
-    # Emoji representing a warning.
+    # Emoji indicator for warning results.
+    # @api private
     WARNING_EMOJI = "⚠️"
 
     include Common
 
-    # @param (see Pass#initialize)
-    # @return [Pass] A passed spec instance.
+    # Creates a new Pass instance with the given details.
+    #
+    # @param details [Hash] Test result details (see #initialize for parameters)
+    # @return [Pass] A new Pass instance
+    # @example
+    #   Expresenter::Pass.with(
+    #     actual: "foo",
+    #     definition: 'eq "foo"',
+    #     error: nil,
+    #     got: true,
+    #     negate: false,
+    #     level: :MUST
+    #   )
     def self.with(**details)
       new(**details)
     end
 
     alias message to_s
 
-    # Initialize method.
+    # Initializes a new Pass instance.
     #
-    # @param actual   [#object_id] Returned value by the challenged subject.
-    # @param definition [String] A readable string of the matcher and any
-    #   expected values.
-    # @param error    [Exception, nil] Any possible raised exception.
-    # @param got      [Boolean, nil] The result of the boolean comparison
-    #   between the actual value and the expected value through the matcher.
-    # @param negate   [Boolean] Evaluated to a negative assertion?
-    # @param level    [:MUST, :SHOULD, :MAY] The requirement level.
+    # @param actual [#object_id] The actual value returned by the test
+    # @param definition [String] Human-readable description of the expectation
+    # @param error [Exception, nil] Any exception that occurred (for info states)
+    # @param got [Boolean, nil] Result of comparing actual vs expected values
+    # @param negate [Boolean] Whether this is a negative assertion
+    # @param level [:MUST, :SHOULD, :MAY] The requirement level of the test
     def initialize(actual:, definition:, error:, got:, negate:, level:)
       @actual     = actual
       @definition = definition
@@ -52,37 +109,37 @@ module Expresenter
       @level      = level
     end
 
-    # Did the test fail?
+    # Always returns false since this class represents passed tests.
     #
-    # @return [Boolean] The spec passed or failed?
+    # @return [false] Always returns false
     def failed?
       false
     end
 
-    # The state of failure.
+    # Pass results are never failures.
     #
-    # @return [Boolean] The test was a failure?
+    # @return [false] Always returns false
     def failure?
       false
     end
 
-    # The state of info.
+    # Indicates if this is an informational result.
     #
-    # @return [Boolean] The test was an info?
+    # @return [Boolean] true if an error was captured but the test still passed
     def info?
       !error.nil?
     end
 
-    # The state of warning.
+    # Indicates if this is a warning result.
     #
-    # @return [Boolean] The test was a warning?
+    # @return [Boolean] true if got equals false, indicating a non-critical issue
     def warning?
       got.equal?(false)
     end
 
-    # Identify the state of the result.
+    # Returns the symbolic representation of the result state.
     #
-    # @return [Symbol] The identifier of the state.
+    # @return [:success, :warning, :info] The type of pass result
     def to_sym
       if success?
         :success
@@ -93,9 +150,9 @@ module Expresenter
       end
     end
 
-    # Express the result with one char.
+    # Returns a single character representing the result state.
     #
-    # @return [String] The char that identify the result.
+    # @return [String] "." for success, "W" for warning, "I" for info
     def char
       if success?
         SUCCESS_CHAR
@@ -106,9 +163,9 @@ module Expresenter
       end
     end
 
-    # Express the result with one emoji.
+    # Returns an emoji representing the result state.
     #
-    # @return [String] The emoji that identify the result.
+    # @return [String] "✅" for success, "⚠️" for warning, "💡" for info
     def emoji
       if success?
         SUCCESS_EMOJI
@@ -121,6 +178,11 @@ module Expresenter
 
     protected
 
+    # Applies color formatting to the given string based on result state.
+    #
+    # @param str [String] The string to colorize
+    # @return [String] ANSI-colored string (green for success, yellow for warning, blue for info)
+    # @api private
     def color(str)
       if success?
         "\e[32m#{str}\e[0m" # green
